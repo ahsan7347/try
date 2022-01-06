@@ -2,12 +2,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 // Create Schema
 const ClassSchema = new Schema({
-  user:[{
-    type: Schema.Types.ObjectId,
-    ref: 'Note',
-    default:null
-  }],
   
+  student: [{
+    type: Schema.Types.ObjectId,
+    ref: 'student',
+    default: null
+  }],
+
   subject: {
     type: String,
     required: true
@@ -23,6 +24,7 @@ const ClassSchema = new Schema({
   time: {
     type: String,
     required: true
-  }});
-module.exports = Classmodel = 
-mongoose.model('Classmodel', ClassSchema);
+  }
+});
+module.exports = Classmodel =
+  mongoose.model('class', ClassSchema);
